@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Resume Builder</h2>
+        <form id="resume-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="photo">Photo:</label>
+                <input type="file" class="form-control-file" id="photo" name="photo">
+            </div>
+            <div class="form-group">
+                <label for="education">Education:</label>
+                <textarea class="form-control" id="education" name="education" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="experience">Experience:</label>
+                <textarea class="form-control" id="experience" name="experience" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="skills">Skills:</label>
+                <textarea class="form-control" id="skills" name="skills" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="achievements">Achievements:</label>
+                <textarea class="form-control" id="achievements" name="achievements"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="languages">Languages:</label>
+                <textarea class="form-control" id="languages" name="languages"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies:</label>
+                <textarea class="form-control" id="hobbies" name="hobbies"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Resume</button>
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="resumeModal" tabindex="-1" role="dialog" aria-labelledby="resumeModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resumeModalLabel">Generated Resume</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="resume-modal-body"></div>
+                    <div class="modal-footer">
+                        <button id="print-resume" class="btn btn-secondary">Print Resume</button>
+                        <button id="download-pdf" class="btn btn-secondary">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+</html>
