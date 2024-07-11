@@ -1,6 +1,12 @@
 $(document).ready(function() {
     $('#resume-form').submit(function(event) {
         event.preventDefault();
+        if (this.checkValidity() === false) {
+            event.stopPropagation();
+            $(this).addClass('was-validated');
+            return;
+        }
+
         var name = $('#name').val();
         var email = $('#email').val();
         var phone = $('#phone').val();
