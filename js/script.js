@@ -27,10 +27,12 @@ $(document).ready(function() {
     function generateResume(name, email, phone, photoSrc, education, experience, skills, achievements, languages, hobbies) {
         var resumeHTML = `
             <div class="resume">
-                <h2>${name}</h2>
+                <div class="resume-header">
+                    <h2>${name}</h2>
+                    ${photoSrc ? `<img src="${photoSrc}" alt="Photo">` : ''}
+                </div>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Phone:</strong> ${phone}</p>
-                ${photoSrc ? `<img src="${photoSrc}" alt="Photo">` : ''}
                 <h3>Education</h3>
                 <p>${education}</p>
                 <h3>Experience</h3>
