@@ -50,7 +50,9 @@ body {
 .modal-body {
     padding: 20px;
 }
-
+.modal-title {
+    color: #333;
+}
 .modal-footer {
     padding: 10px;
     border-top: 1px solid #555; /* Darker border */
